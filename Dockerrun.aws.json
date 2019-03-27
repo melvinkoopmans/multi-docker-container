@@ -5,25 +5,29 @@
             "name": "client",
             "image": "melvinkoopmans/multi-docker-client",
             "hostname": "client",
-            "essential": false
+            "essential": false,
+            "memory": 128
         }, 
         {
             "name": "server",
             "image": "melvinkoopmans/multi-docker-server",
             "hostname": "api",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "worker",
             "image": "melvinkoopmans/multi-docker-worker",
             "hostname": "worker",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "nginx",
             "image": "melvinkoopmans/multi-docker-nginx",
             "hostname": "nginx",
             "essential": true,
+            "memory": 128,
             "portMappings": [
                 {
                     "hostPort": 80,
